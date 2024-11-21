@@ -32,7 +32,7 @@ def merge_images(img1, img2, alpha=0.5):
     img2_resized = img2.resize(img1.size)
     return Image.blend(img1, img2_resized, alpha)
 
-def manipulate_image(img1, img2=None, blur_radius=None, contrast_factor=1.4,
+def manipulate_image(img1, img2=None, blur_radius=None, contrast_factor=None,
                      new_width=None, new_height=None, alpha=None):
     """
     Manipulate an image based on provided parameters.
@@ -65,7 +65,7 @@ def manipulate_image(img1, img2=None, blur_radius=None, contrast_factor=1.4,
             img1 = merge_images(img1, img2, alpha)
 
     #Display the image
-            Image.show()
+            image.show()
 
     #Return the manipulated image
         return img
